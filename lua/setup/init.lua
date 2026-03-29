@@ -1,15 +1,7 @@
 require("setup.remap")
-print("pomocy")
-vim.lsp.config['pyright'] = {
-	filetypes = { "py" },
-	settings = {
-		python = {
-			runtime = {
-				version = 'Pyright'
-			}
-		}
-	}
-}
-vim.lsp.enable("pyright")
+require("setup.lsp")
 vim.g.terminal_emulator = "alacritty"
 vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2

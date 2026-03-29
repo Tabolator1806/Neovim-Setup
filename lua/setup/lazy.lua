@@ -25,9 +25,10 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     -- { "Yassinproweb/lytmode.nvim", config = function() vim.cmd.colorscheme "lytmode" end},
-    {"tribela/transparent.nvim", config=true, event='VimEnter'},
     { import = "setup.plugins" },
-    { 'nmac427/guess-indent.nvim', config = function() require('guess-indent').setup {} end}
+    { import = "setup.plugins.lsp" },
+    {"tribela/transparent.nvim", config=true, event='VimEnter'},
+    { 'nmac427/guess-indent.nvim', config = function() require('guess-indent').setup {} end},
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
