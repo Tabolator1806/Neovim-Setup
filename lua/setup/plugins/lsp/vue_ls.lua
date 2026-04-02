@@ -1,6 +1,10 @@
 return{
-	vim.lsp.config('vue-ls',{
-		cmd = {'vue-language-server'},
-		filetypes = {'vue'}
-	})
+	on_attach = function(client, buffer)
+		vim.api.nvim_create_autocmd("BufWritePost", {
+			pattern = { "*.js","*ts","*.vue"},
+			callback = function(ctx)
+				client.notify("$/onDidChangeTsOrJsFile", {uri = ctx.match})
+			end,
+		})
+	end
 }
