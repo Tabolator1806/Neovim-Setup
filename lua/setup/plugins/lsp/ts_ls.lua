@@ -1,7 +1,7 @@
 return{
-	vim.lsp.config('ts-ls',{
+	vim.lsp.config('ts_ls',{
 		cmd = {'typescript-language-server'},
-		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "html" },
 		init_options = {
 			plugins = {
 				name = "@vue/typescript-plugin",
