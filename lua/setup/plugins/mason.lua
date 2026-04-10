@@ -11,7 +11,8 @@ return {
 			"pyright",
 			"clangd",
 			"eslint",
-			"vue_ls"
+			"vue_ls",
+			"vtsls"
 		}
 	},
 	dependencies = {
